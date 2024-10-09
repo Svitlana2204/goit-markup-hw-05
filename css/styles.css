@@ -520,7 +520,7 @@ text-transform: capitalize;
 }
 
 
-.backdrop {
+.modal-backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -537,7 +537,7 @@ text-transform: capitalize;
 }
 
 
-.backdrop.is-open{
+.modal-backdrop.is-open{
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -593,10 +593,7 @@ text-transform: capitalize;
 .footer-button:hover,
 .footer-button:focus {
   background-color: #404bbf; 
-}
-
-.footer-button:hover svg,
-.footer-button:focus svg {
+  fill: #ffffff;
   border: none;
 }
 
@@ -619,6 +616,12 @@ text-transform: capitalize;
   margin-bottom: 16px;
 }
 
+
+
+.social-subscribe{
+  margin-left: 100px;
+}
+
 .social-clause{
   margin-bottom: 16px;
   font-weight: 500; 
@@ -627,34 +630,36 @@ text-transform: capitalize;
   letter-spacing: 0.02em;
   color: #ffffff;
 }
-.social-form {
+.social-form-style {
   display: flex; 
   gap: 24px;
-}
-.social-form-style {
-
 }
 
 .social-form-email{
   width: 264px; 
   height: 40px;
   border: 1px solid #ffffff; 
+  border-radius: 4px;
   background-color: transparent; 
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em; 
   padding-left: 16px; 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px; 
   color: #ffffff;
 }
 
 
-.E-mail {
-  color: #ffffff; 
+.social-form-email::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  padding: 8px 16px;
 }
 
-.social-fomin-bth{
+.social-form-bth{
   min-width: 165px;
   height: 40px; 
   display: flex; 
@@ -671,9 +676,23 @@ text-transform: capitalize;
   border: none; 
   border-radius: 4px; 
 }
+.social-form-bth:hover,
+.social-form-bth:focus {
+  background-color: #404bbf;
+}
+
+.social-class-bth{
+    display: flex;
+    fill: #ffffff;
+    align-items: center;
+    gap: 16px;
+    margin-left: 16px;
+}
 
 
-
+.modal-backdrop{
+  position: fixed;
+}
 
 .modal-element {
   margin-bottom: 8px;
@@ -745,6 +764,25 @@ text-transform: capitalize;
 .comment-accept{
   margin-bottom: 24px;
 }
+
+
+.element-accept-checkbox:focus + .review-form-checkbox-label > .span-policy {
+  border: 1px solid #4d5ae5;
+}
+
+
+
+
+.element-accept-checkbox:checked + .review-form-checkbox-label> .span-policy {
+  background-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
+}
+
+
+
+
+
 .name-accept{
   font-size: 12px;
   line-height: 1.17; 
@@ -765,26 +803,40 @@ text-transform: capitalize;
   fill: transparent; 
 }
 
-.class-accept{
-  
-}
 
 .logo-accept {
   color:#4d5ae5; 
 }
 .modal-bth {
-  display: block;
-  min-width: 169px;
-  height: 56px;
   font-family: "Roboto";
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #ffffff;
-  cursor: pointer;
   background-color: #4D5AE5;
+  min-width: 169px;
+  height: 56px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
   border: none;
+  border-radius: 4px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  text-align: center;
+}
+
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
