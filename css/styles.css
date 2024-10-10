@@ -724,9 +724,8 @@ text-transform: capitalize;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.element-modal :hover,
+
 .element-modal :focus {
-  border: 1px solid  #4D5AE5;
   border-color: #4D5AE5; 
 }
 
@@ -787,7 +786,7 @@ text-transform: capitalize;
 
 
 
-.name-accept{
+.name-accept-checkbox-label{
   font-size: 12px;
   line-height: 1.17; 
   letter-spacing: 0.04em;
