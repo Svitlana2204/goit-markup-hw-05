@@ -769,7 +769,7 @@ text-transform: capitalize;
 
 
 
-.comment-element-wrap :focus{ 
+.comment-element-wrap :focus + .element-accept-checkbox{ 
   border-color: #4D5AE5;
 }
 
