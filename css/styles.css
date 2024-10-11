@@ -770,7 +770,7 @@ text-transform: capitalize;
 
 
 .comment-element-wrap :focus{ 
-  border-color: #4d5ae5;
+  border-color: #4D5AE5;
 }
 
 .element-accept-checkbox:checked +.name-accept-checkbox-label>.span-accept{
