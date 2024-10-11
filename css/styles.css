@@ -543,6 +543,16 @@ text-transform: capitalize;
   pointer-events: auto;
 }
 
+.modal-backdrop:not(.is-open) {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+
+
+
+
 
 .modal{
   position: absolute;
@@ -696,6 +706,8 @@ text-transform: capitalize;
   position: fixed;
 }
 
+
+
 .modal-element {
   margin-bottom: 8px;
 }
@@ -756,12 +768,16 @@ text-transform: capitalize;
 }
 
 
-.comment-element-wrap :hover,
-.comment-element-wrap :focus,
-.comment-element-wrap {
+
+.comment-element-wrap :focus{ 
   border-color: #4d5ae5;
 }
 
+.element-accept-checkbox:checked +.name-accept-checkbox-label>.span-accept{
+  background-color: #404bbf;
+  border: none;
+  fill: #F4F4FD;
+}
 
 
 
@@ -771,25 +787,11 @@ text-transform: capitalize;
 }
 
 
-.span-accept :hover,
-.span-accept :focus,
-.span-accept :active {
+.element-modal:focus{
   border-color: #4d5ae5;
 }
 
-
-
-
-
-.span-accept :hover,
-.span-accept :focus,
-.span-accept :active {
-  border-color: #4d5ae5;
-}
-
-.span-accept :hover + .class-accept,
-.span-accept :focus + .class-accept,
-.span-accept :active {
+.element-modal:focus + .element-class {
   fill: #4d5ae5;
 }
 
