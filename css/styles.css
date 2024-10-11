@@ -761,9 +761,11 @@ text-transform: capitalize;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.comment-element-wrap :focus {
+.comment-element-wrap :focus 
+.comment-element-wrap :hover, {
   border-color: #4D5AE5; 
 }
+
 .comment-accept{
   margin-bottom: 24px;
 }
@@ -776,14 +778,25 @@ text-transform: capitalize;
 
 
 
-.element-accept-checkbox:checked + .name-accept-checkbox-label> .span-accept {
+.element-accept-checkbox:checked 
++ .name-accept-checkbox-label
+> .span-accept {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
 }
 
+.span-accept :hover,
+.span-accept :focus,
+.span-accept :active {
+  border-color: #4d5ae5;
+}
 
-
+.span-accept :hover + .class-accept,
+.span-accept :focus + .class-accept,
+.span-accept :active {
+  fill: #4d5ae5;
+}
 
 
 .name-accept-checkbox-label{
